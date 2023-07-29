@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./weather.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css" integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="./favicon.ico">
+</head>
+
+<body>
+    <div id="wallpaper" class="storm">
+        
+        <div class="main">
+             
+            <div class="main1">
+                <div class="main2">
+                    <div class="icon"><i class='bx bxs-thermometer tmp'></i>
+                    <h1 id="temp">21<span>°c</span></h1>
+                </div>
+                    <h2 id="climate">Rain</h2>
+                    <h3 id="climate1">Partially Raining</h3>
+                </div>
+                <div class="city">
+                    <img src="./photos/R.png" alt="">
+                    <h1 id="place">Silicon Valley</h1>
+                    <h2 id="date">25/05/2023</h2>
+                </div>
+            </div>
+            <div class="searchmain">
+                <div class="search">
+                    <form action="">
+                    <input type="text" id="searchbox" placeholder="Search City">
+                    <!-- <button type="submit" onclick="getWeather()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAqhJREFUSEvl1l3ojncYwPGPMObAgROvQ4u8TJQDBzgwhWRSa2alkJmQlLxkc8LJHCBvkTXMtKUsB7MSDnBEOdkUy1tZYtOa1CgbY+ta16Pb7Xme+/GvPweus+f5Xb/r+7ve7w5ekXR4RVytgt/AGAxGL/yGaziHh215fBV4ADbhPXStA3iA77EKN1/kAc3AS7AF4W2V/I1F2F+lWDtvBA4vV6TSP9iNU7iM63gbQzERC9Exddfi81bg9cCLsSsvRx6n4UoTYyNxFH1TZxYOVcHL4GE4j87p3Xj8kUbeyVy/icjtD/g5z/rhDN7CfQzBr83gZfBxTM5Kjcu/5OUNWFPH0Dqsz/9H4Uf+75QDmNsquAfupPJWLC9c3IiVDQxFjr/Ms4P4CH8i7D1uBC96/AG+S8WxOFu69FmG9nQW1Q70ybAPxO+YWchvPRtPTRbBy7AtT7rjXkWBvIuTqTMDRxAPiKoPmYevW/H400IrdGoWpjQW/R1RCInaiAh1wV/532pEiupK0ePI1Rep1Ru3Kzyudxyhv5UHHxZS95xuETwJJ1JjKo61ATw9Qx5XR+BiKx53w90ckXvwSRvA32A2/s3Z3nCBlPv4MN7HEwzPIdIqP/r4p1TeiwXNLpbBMYMjPLGJYlyOyzapgvfPyRVjM2ZBrM+IXkOpN6s/RoQ65Aam4FITG6NzVvdMnZ1YWvXSRtupOCJjO8XSiMFR204xTiMVEzKkZTvx+H0v6nFNP7bUdkRPV8mj/CCI6VeTpvCqL5DI+WZEe8VwKEvM4q8QyyL6dz6isCrhVeCagYDGN9eg/OaKrXUVFwqTqqZbhsfveNwz0iq4KtTl84BFgYb9aM05+Lao1F7gYBThUeVR7U+lPcEBiekXPR0L46WEujI17e1xwwe8fuD/ABLffR+uHpEwAAAAAElFTkSuQmCC"/> </button>                    -->
+                    <i onclick="getWeather()"  class='bx bx-search-alt' ></i>
+
+                </form> 
+
+                </div>
+            <div class="itemsdiv row">
+                
+                <div class="items col-sm-6"><i class='bx bxs-thermometer tmp'></i>
+                    <h3 >Temp-Max</h3>
+                    <h1 ><span id="tempmax">30</span>°c</h1>
+                </div>
+                <div class="items col-sm-6"><i class='bx bxs-thermometer tmp'></i>
+                    <h3  >Temp-Min</h3>
+                    <h1 ><span id="tempmin">30</span>°c</h1>
+                </div>
+                <div class="items col-sm-6"><i class='bx bxl-tailwind-css wind'></i>
+                    <h3>Wind speed</h3>
+                    <h1 ><span id="wind">3.4 </span>m/h</h1>
+                </div>
+                <div class="items col-sm-6"><i class="fa-solid fa-droplet iconNew "></i>
+                    <h3>Humidity</h3>
+                    <h1 ><span id="humidity">60</span>%</h1>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</body>
+<script src="./weather.js"></script>
+</html>
